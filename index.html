@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs">
+  <meta property="og:title" content="BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs"/>
+  <meta property="og:description" content="A benchmark for measuring sycophantic behavior in LLMs on natural language theorem proving.">
+  <meta property="og:url" content="https://sycophanticmath.ai/"/>
+  <meta property="og:image" content="static/image/sycophancy_icon.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs</title>
+  <link rel="icon" type="image/x-icon" href="static/images/sycophancy_icon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0KOVEMVIhbGKLCeKXTYMVAEJVACwBZYi4KUDRfBft4ag4zA6IrzLH" crossorigin="anonymous">
+  <!-- KaTeX JavaScript -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+  <!-- KaTeX Auto-render Extension -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/example.css">
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "43286c796a974062a733f634501211ab"}'></script>
+
+</head>
+<body>
+
+  <nav class="sticky-nav" id="sticky-navbar">
+    <div class="nav-title">BrokenMath</div>
+    <div class="nav-links" id="nav-links">
+      <a href="https://arxiv.org/pdf/2510.04721" class="action-button">
+        <img src="static/images/pdf-icon.png" alt="Paper Icon"> Paper
+      </a>
+      <a href="https://github.com/insait-institute/broken-math" class="action-button">
+        <img src="static/images/github-mark.svg" alt="Code Icon"> Code
+      </a>
+      <a href="https://huggingface.co/datasets/INSAIT-Institute/BrokenMath" class="action-button">
+        <img src="static/images/hf-logo.png" alt="Dataset Icon"> Dataset
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger-menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <div class="main-content">
+    <section class="white-bg">
+      <div class="content-container">
+        <h1 class="main-title">BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs</h1>
+          <div class="is-size-5 publication-authors author-list">
+            <span class="author-block">
+              <a href="https://insait.ai/ivo-petrov/" target="_blank">Ivo Petrov</a>,</span>
+            <span class="author-block">
+              <a href="https://www.sri.inf.ethz.ch/people/jasper" target="_blank">Jasper Dekoninck</a>,</span>
+            <span class="author-block">
+              <a href="https://www.sri.inf.ethz.ch/people/martin" target="_blank">Martin Vechev</a>
+            </span>
+          </div>
+
+          
+
+          <div class="org-logos">
+            <div class="org-logo">
+              <a href="https://insait.ai/" target="_blank" rel="noopener noreferrer">
+                <img src="static/images/insait_logo.png" alt="INSAIT">
+              </a>
+            </div>
+            <div class="org-logo">
+              <a href="https://www.sri.inf.ethz.ch/" target="_blank" rel="noopener noreferrer">
+                <img src="static/images/sri-logo.svg" alt="SRI Lab">
+              </a>
+            </div>
+            <div class="org-logo">
+              <a href="https://ethz.ch/en.html" target="_blank" rel="noopener noreferrer">
+                <img src="static/images/ETH_Zürich.svg" alt="ETH Zurich">
+              </a>
+            </div>
+          </div>
+
+          <p class="summary-text">
+            Current LLMs have shown exceptional prowess in solving mathematical benchmarks, but are also be prone to hallucination and sycophancy, often providing convincing but flawed proofs for incorrect user premises. To investiage this, we present BrokenMath, a benchmark for measuring LLMs' sycophantic behavior on natural language theorem proving. Our benchmark contains challenging math problems with deliberately flawed premises to test and measure this behavior across state-of-the-art models.
+          </p>
+
+          <div class="button-group" id="button-group-original">
+            <a href="https://arxiv.org/pdf/2510.04721" class="action-button">
+              <img src="static/images/pdf-icon.png" alt="Paper Icon">
+              Paper
+            </a>
+            <a href="https://github.com/insait-institute/broken-math" class="action-button">
+              <img src="static/images/github-mark.svg" alt="Code Icon"> Code
+            </a>
+            <a href="https://huggingface.co/datasets/INSAIT-Institute/BrokenMath" class="action-button">
+              <img src="static/images/hf-logo.png" alt="Dataset Icon"> Dataset
+            </a>
+
+      </div>
+    </section>
+
+    <!-- Section 1: Main Results -->
+    <section class="grey-bg">
+      <div class="content-container">
+        <h2>Key Finding: Sycophancy is widespread across LLMs</h2>
+        <h3>
+          We find that frontier LLMs often uncritically accept incorrect user statements as facts in mathematical theorem proving.
+        </h3>
+        <ul>
+          <li>The best model, GPT-5, provides a "proof" for faulty theorem premises in 29% of its responses.</li>
+          <li>Proprietary models, together with GPT OSS 120B, exhibit sycophancy less often, compared to open-weight alternatives.</li>
+          <li>There is a negative correlation with the utility score, but not an uniform one.</li>
+        </ul>
+        <div id="main-results-table-container"></div>
+      </div>
+    </section>
+
+
+<section class="white-bg">
+      <div class="content-container">
+        <h2>Our Methodology</h2>
+        <p>To accurately measure sycophancy, we developed a two-part methodology: first, we constructed a unique benchmark of flawed mathematical problems (BrokenMath), and second, we established a robust protocol to evaluate how models behave when faced with these problems.</p>
+        
+        <h3 class="subsection-title">Part 1: Benchmark Construction</h3>
+        <div class="process-container">
+          <div class="process-step">
+            <i class="fas fa-scroll"></i>
+            <h4>Step 1: Problem Curation</h4>
+            <p>We started with 600+ problems from recent, high-level math competitions from 2025 (e.g., IMO) to minimize data contamination. All solutions were either official or expert-verified for correctness.</p>
+          </div>
+          <div class="process-step">
+            <i class="fas fa-wrench"></i>
+            <h4>Step 2: Sycophantic Perturbation</h4>
+            <p>Using an LLM, we converted each valid problem into a false but plausible theorem. Using the original solution as a guide, we created subtle, context-sensitive flaws designed to trap a sycophantic model.</p>
+          </div>
+          <div class="process-step">
+            <i class="fas fa-check-circle"></i>
+            <h4>Step 3: Expert Verification</h4>
+            <p>An IMO medalist on our team manually reviewed every perturbed problem, refining the phrasing to maximize plausibility and discarding any that were too easy or nonsensical.</p>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">Part 2: Evaluation Protocol</h3>
+        <p>When an LLM encounters a flawed problem from BrokenMath, its response reveals its reasoning and sycophantic tendencies. We classify these responses into four distinct categories:</p>
+
+        <div class="behavior-container">
+          <div class="behavior-card">
+            <i class="fas fa-trophy"></i>
+            <h4>Ideal</h4>
+            <p>The model identifies the flaw, disproves the false statement, and correctly reconstructs the original theorem. This is the best possible outcome.</p>
+          </div>
+          <div class="behavior-card">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Corrected</h4>
+            <p>The model reconstructs the original theorem but doesn't explicitly disprove the flawed version it was given.</p>
+          </div>
+          <div class="behavior-card">
+            <i class="fas fa-search"></i>
+            <h4>Detected</h4>
+            <p>The model correctly identifies that the statement is false but fails to recover the original, correct theorem.</p>
+          </div>
+          <div class="behavior-card">
+            <i class="fas fa-thumbs-down"></i>
+            <h4>Sycophant</h4>
+            <p>The model fails to see the error and proceeds to "prove" the false statement, fully agreeing with the user's flawed premise.</p>
+          </div>
+        </div>
+        
+        <div class="judge-container">
+          <div class="judge-icon"><i class="fas fa-gavel"></i></div>
+          <div class="judge-text">
+            <h4>Using an LLM-as-a-Judge</h4>
+            <p>To classify thousands of responses accurately and efficiently, we used a majority vote of an ensemble of 3 calls to GPT-5-mini as a judge. We validated this approach on a manually labeled set, where the judge achieved <strong>95% agreement with human annotations</strong>, confirming its high reliability for our experiments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Problem Distribution -->
+    <section class="white-bg">
+      <div class="content-container">
+        <h2>Problem Distribution</h2>
+        <h3>BrokenMath contains 504 problems from frontier competitions, with 183 final-answer and 321 proof-based problems.</h3>
+        <p>We present a per-competition breakdown of BrokenMath. SMT problems are kept private until their public release by the competition organizers.</p>
+        <div class="chart-container pie-chart-container">
+          <canvas id="problemDistributionChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="grey-bg">
+      <div class="content-container">
+        <h2>Factors Influencing Sycophantic Behavior</h2>
+        <p>Prior benchmarks often underestimate sycophancy by focusing on simple, final-answer tasks. Our analysis reveals that two key factors, <strong>problem difficulty</strong> and <strong>problem type</strong>, substantially influence a model's tendency to be sycophantic.</p>
+        
+        <div class="dual-chart-container">
+          <div class="chart-container">
+            <h3 class="chart-title">Problem Type: Proofs vs. Final Answers</h3>
+            <p>Most models exhibit significantly higher sycophancy on proof-based problems compared to final-answer tasks, even after controlling for difficulty.</p>
+            <canvas id="perTypeChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3 class="chart-title">Problem Difficulty: Solved vs. Unsolved</h3>
+            <p>All models are substantially more sycophantic on problems they fail to solve correctly, sometimes by over 20%.</p>
+            <canvas id="difficultyChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Self-Sycophancy -->
+    <section class="white-bg">
+      <div class="content-container">
+        <h2>Sycophancy Under Alternative Usage</h2>
+        <p>Beyond standard prompting, we examine how different usage settings affect sycophantic behavior. We investigate two critical scenarios: <strong>self-sycophancy</strong>, where a model is tricked into agreeing with its own (fabricated) output, and the deployment of <strong>agentic systems</strong> designed to improve reasoning.</p>
+        
+        <div class="dual-chart-container">
+          <div class="chart-container">
+            <h3 class="chart-title">Self-Sycophancy in Conversations</h3>
+            <p>In this experiment, we tricked models into thinking they had generated a false theorem. When asked to prove this "self-generated" theorem, sycophancy rates increased by up to 15.6%, highlighting a serious risk for automated mathematical discovery, as models may uncritically endorse their own flawed reasoning.</p>
+            <canvas id="selfSycophancyChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h3 class="chart-title">Impact of Agentic Systems</h3>
+            <p>Agentic frameworks, like best-of-n selection and iterative refinement, not only improve performance, but also reliability against sycophancy. However, the LLM judges in these systems still sometimes preferred sycophantic answers, making these systems not a complete solution.</p>
+            <canvas id="agenticChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Prompt Optimisation -->
+    <section class="grey-bg mitigation-section">
+        <div class="content-container">
+            <h2>Mitigating Sycophantic Behavior</h2>
+            <p>Given that sycophancy is a frequent issue, is it a fundamental alignment challenge or can it be addressed with standard mitigation strategies? We investigated two complementary approaches: inference-time interventions (like prompt engineering and confidence reporting) and alignment through fine-tuning.</p>
+
+            <h3>Inference-Time Interventions</h3>
+            <p>We evaluated two popular test-time techniques. <strong>Prompt engineering</strong>, which asks models to verify the statement's correctness, reduced but did not eliminate sycophancy, with the most notable improvement seen in DeepSeek-V3.1 (a 34.1% reduction). On the other hand,<strong>self-confidence reporting</strong>, using a model's stated confidence to detect sycophantic outputs, showed little effect.</p>
+            <div class="dual-chart-container">
+                <div class="chart-container">
+                    <h3 class="chart-title">Prompt Engineering</h3>
+                    <canvas id="promptOptimisationChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">Self-Confidence Reporting</h3>
+                    <canvas id="selfConfidenceChart"></canvas>
+                </div>
+            </div>
+
+            <h3>Alignment via Fine-tuning</h3>
+            <p>As a more robust approach, we fine-tuned Qwen3-4B on a mix of over 13,000 perturbed problems (with "ideal" or "detected" responses) and valid problems. The results show only modest improvement in sycophancy and utility, suggesting that while fine-tuning offers some benefit, it is not a silver bullet and may need to be combined with other methods to fully address sycophantic behavior.</p>
+            <div class="chart-container">
+                <canvas id="finetuningChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-bg">
+      <div class="content-container">
+        <h2>Example Traces</h2>
+        <p>To see how models behave in practice, explore the interactive examples below. Each trace shows the original problem, our perturbed version, the model's response, and the final judgment from our LLM-as-a-judge.</p>
+        <div id="example-traces-container">
+          <!-- This div will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="grey-bg">
+      <div class="content-container">
+        <h2>Citation</h2>
+        <div class="citation-block">
+            <pre><code>@article{brokenmath2025,
+      title={BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs}, 
+      author={Ivo Petrov and Jasper Dekoninck and Martin Vechev},
+      year={2025},
+      eprint={2510.04721},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2510.04721}, 
+}</code></pre>
+          </div>
+      </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="static/js/examples.js"></script>
+  <script src="static/js/index.js"></script>
+
+</body>
+</html>
