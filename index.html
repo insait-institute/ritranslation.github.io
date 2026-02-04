@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs">
-  <meta property="og:title" content="BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs"/>
-  <meta property="og:description" content="A benchmark for measuring sycophantic behavior in LLMs on natural language theorem proving.">
-  <meta property="og:url" content="https://sycophanticmath.ai/"/>
-  <meta property="og:image" content="static/image/sycophancy_icon.png" />
+  <meta name="description" content="Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets">
+  <meta property="og:title" content="Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets"/>
+  <meta property="og:description" content="A fully automated framework for scalable, high-quality translation of datasets and benchmarks using test-time compute scaling strategies.">
+  <meta property="og:url" content="https://ritranslation.ai/"/>
+  <meta property="og:image" content="static/images/translation_icon.svg" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs</title>
-  <link rel="icon" type="image/x-icon" href="static/images/sycophancy_icon.png">
+  <title>Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets</title>
+  <link rel="icon" type="image/svg+xml" href="static/images/translation_icon.svg">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -38,16 +38,16 @@
 <body>
 
   <nav class="sticky-nav" id="sticky-navbar">
-    <div class="nav-title">BrokenMath</div>
+    <div class="nav-title">RiTranslation</div>
     <div class="nav-links" id="nav-links">
-      <a href="https://arxiv.org/pdf/2510.04721" class="action-button">
+      <a href="#" class="action-button">
         <img src="static/images/pdf-icon.png" alt="Paper Icon"> Paper
       </a>
-      <a href="https://github.com/insait-institute/broken-math" class="action-button">
+      <a href="https://github.com/insait-institute/ritranslation" class="action-button">
         <img src="static/images/github-mark.svg" alt="Code Icon"> Code
       </a>
-      <a href="https://huggingface.co/datasets/INSAIT-Institute/BrokenMath" class="action-button">
-        <img src="static/images/hf-logo.png" alt="Dataset Icon"> Dataset
+      <a href="#" class="action-button">
+        <img src="static/images/hf-logo.png" alt="Dataset Icon"> Benchmarks
       </a>
     </div>
     <button class="hamburger" id="hamburger-menu">
@@ -58,18 +58,17 @@
   <div class="main-content">
     <section class="white-bg">
       <div class="content-container">
-        <h1 class="main-title">BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs</h1>
+        <h1 class="main-title">Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets</h1>
           <div class="is-size-5 publication-authors author-list">
             <span class="author-block">
-              <a href="https://insait.ai/ivo-petrov/" target="_blank">Ivo Petrov</a>,</span>
+              <a href="https://ayukh.com/" target="_blank">Hanna Yukhymenko</a><sup>1,*</sup>,</span>
             <span class="author-block">
-              <a href="https://www.sri.inf.ethz.ch/people/jasper" target="_blank">Jasper Dekoninck</a>,</span>
+              <a href="https://insait.ai/anton-alexandrov/" target="_blank">Anton Alexandrov</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://www.sri.inf.ethz.ch/people/martin" target="_blank">Martin Vechev</a>
+              <a href="https://www.sri.inf.ethz.ch/people/martin" target="_blank">Martin Vechev</a><sup>1,2</sup>
             </span>
           </div>
-
-          
+          <p class="author-note"><sup>1</sup>ETH Zurich, <sup>2</sup>INSAIT, Sofia University "St. Kliment Ohridski"<br><sup>*</sup>Work done during Master's thesis at INSAIT</p>
 
           <div class="org-logos">
             <div class="org-logo">
@@ -78,31 +77,31 @@
               </a>
             </div>
             <div class="org-logo">
-              <a href="https://www.sri.inf.ethz.ch/" target="_blank" rel="noopener noreferrer">
-                <img src="static/images/sri-logo.svg" alt="SRI Lab">
-              </a>
-            </div>
-            <div class="org-logo">
               <a href="https://ethz.ch/en.html" target="_blank" rel="noopener noreferrer">
                 <img src="static/images/ETH_Zürich.svg" alt="ETH Zurich">
               </a>
             </div>
+            <!-- <div class="org-logo">
+              <a href="https://www.sri.inf.ethz.ch/" target="_blank" rel="noopener noreferrer">
+                <img src="static/images/sri-logo.svg" alt="SRI Lab">
+              </a>
+            </div> -->
           </div>
 
-          <p class="summary-text">
-            Current LLMs have shown exceptional prowess in solving mathematical benchmarks, but are also be prone to hallucination and sycophancy, often providing convincing but flawed proofs for incorrect user premises. To investiage this, we present BrokenMath, a benchmark for measuring LLMs' sycophantic behavior on natural language theorem proving. Our benchmark contains challenging math problems with deliberately flawed premises to test and measure this behavior across state-of-the-art models.
-          </p>
+          <div class="summary-text">
+            <strong style="font-size: 1.1em; color: #D64045;">Abstract:</strong> The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic drift and context loss, which can lead to misleading performance metrics. In this work, we present a fully automated framework designed to address these challenges by enabling scalable, high-quality translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies, specifically Universal Self-Improvement (USI) and our proposed multi-round ranking method, T-RANK, allows for significantly higher quality outputs compared to traditional pipelines. By effectively applying these methods, our framework ensures that benchmarks preserve their original task structure and linguistic nuances during localization. We apply this approach to translate popular benchmarks and datasets into eight Eastern and Southern European languages. Evaluations using both reference-based metrics and LLM-as-a-judge show that our translations surpass existing resources, resulting in more accurate downstream model assessment. We release both the framework and the improved benchmarks to facilitate robust and reproducible multilingual AI development.
+          </div>
 
           <div class="button-group" id="button-group-original">
-            <a href="https://arxiv.org/pdf/2510.04721" class="action-button">
+            <a href="#" class="action-button">
               <img src="static/images/pdf-icon.png" alt="Paper Icon">
               Paper
             </a>
-            <a href="https://github.com/insait-institute/broken-math" class="action-button">
+            <a href="https://github.com/insait-institute/ritranslation" class="action-button">
               <img src="static/images/github-mark.svg" alt="Code Icon"> Code
             </a>
-            <a href="https://huggingface.co/datasets/INSAIT-Institute/BrokenMath" class="action-button">
-              <img src="static/images/hf-logo.png" alt="Dataset Icon"> Dataset
+            <a href="#" class="action-button">
+              <img src="static/images/hf-logo.png" alt="Dataset Icon"> Benchmarks
             </a>
 
       </div>
@@ -111,165 +110,287 @@
     <!-- Section 1: Main Results -->
     <section class="grey-bg">
       <div class="content-container">
-        <h2>Key Finding: Sycophancy is widespread across LLMs</h2>
+        <h2>QA Context-aware Test-Time Scaling for Automated Translation</h2>
         <h3>
-          We find that frontier LLMs often uncritically accept incorrect user statements as facts in mathematical theorem proving.
+          Our framework demonstrates that test-time compute strategies significantly enhance machine translation quality for multilingual benchmarks.
         </h3>
         <ul>
-          <li>The best model, GPT-5, provides a "proof" for faulty theorem premises in 29% of its responses.</li>
-          <li>Proprietary models, together with GPT OSS 120B, exhibit sycophancy less often, compared to open-weight alternatives.</li>
-          <li>There is a negative correlation with the utility score, but not an uniform one.</li>
+          <li>Our proposed multi-sampling methods achieve the highest COMET scores on WMT24++ and FLORES benchmarks.</li>
+          <li>LLM-as-a-judge evaluations show our translations are preferred over existing ones by a big margin.</li>
+          <li>We trace a connection between translation quality of the benchmarks and downstream model performance on them.</li>
         </ul>
-        <div id="main-results-table-container"></div>
+        <div class="chart-container">
+          <h3 class="chart-title">Downstream Model Performance by Benchmark</h3>
+          <p>Mid-sized models consistently achieve higher scores on our translations compared to existing benchmarks. Winogrande shows the largest improvement (+3.42%), followed by ARC-Challenge (+2.35%), Hellaswag (+1.63%), and MMLU (+0.94%).</p>
+          <canvas id="agenticChart"></canvas>
+        </div>
+        <div class="judge-container">
+          <div class="judge-icon"><i class="fas fa-language"></i></div>
+          <div class="judge-text">
+            <h4>Key Insight: Context-Aware Translation</h4>
+            <p>Translating questions and answer options within the same prompt context is essential for sentence completion tasks, as it <strong>preserves semantic relationships and prevents contextual misleading</strong> during evaluation. This addresses a common flaw in existing benchmarks.</p>
+          </div>
+        </div>
       </div>
     </section>
 
 
 <section class="white-bg">
       <div class="content-container">
-        <h2>Our Methodology</h2>
-        <p>To accurately measure sycophancy, we developed a two-part methodology: first, we constructed a unique benchmark of flawed mathematical problems (BrokenMath), and second, we established a robust protocol to evaluate how models behave when faced with these problems.</p>
-        
-        <h3 class="subsection-title">Part 1: Benchmark Construction</h3>
-        <div class="process-container">
-          <div class="process-step">
-            <i class="fas fa-scroll"></i>
-            <h4>Step 1: Problem Curation</h4>
-            <p>We started with 600+ problems from recent, high-level math competitions from 2025 (e.g., IMO) to minimize data contamination. All solutions were either official or expert-verified for correctness.</p>
-          </div>
-          <div class="process-step">
-            <i class="fas fa-wrench"></i>
-            <h4>Step 2: Sycophantic Perturbation</h4>
-            <p>Using an LLM, we converted each valid problem into a false but plausible theorem. Using the original solution as a guide, we created subtle, context-sensitive flaws designed to trap a sycophantic model.</p>
-          </div>
-          <div class="process-step">
-            <i class="fas fa-check-circle"></i>
-            <h4>Step 3: Expert Verification</h4>
-            <p>An IMO medalist on our team manually reviewed every perturbed problem, refining the phrasing to maximize plausibility and discarding any that were too easy or nonsensical.</p>
-          </div>
-        </div>
+        <h2>Our Framework</h2>
+        <p>We present a novel automated translation framework that utilizes Large Language Models with features adapted for both dataset and benchmark (QA/test) formats. The framework offers flexibility in methods and configurable parameters to optimize cost- and time-effectiveness.</p>
 
-        <h3 class="subsection-title">Part 2: Evaluation Protocol</h3>
-        <p>When an LLM encounters a flawed problem from BrokenMath, its response reveals its reasoning and sycophantic tendencies. We classify these responses into four distinct categories:</p>
+        <h3 class="subsection-title">Translation Methods</h3>
+        <p>Our framework supports four translation methods, each with distinct advantages for different use cases:</p>
 
         <div class="behavior-container">
           <div class="behavior-card">
+            <i class="fas fa-check"></i>
+            <h4>SC (Self-Check)</h4>
+            <p>Simple 0-shot translation with optional self-correction. Best for high-resource languages where basic translation quality is already sufficient.</p>
+          </div>
+          <div class="behavior-card">
+            <i class="fas fa-dice"></i>
+            <h4>Best-of-N</h4>
+            <p>Samples N translation candidates at higher temperature and selects the best one based on LLM scoring. Cost-effective and language-agnostic.</p>
+          </div>
+          <div class="behavior-card">
+            <i class="fas fa-magic"></i>
+            <h4>USI</h4>
+            <p>Universal Self-Improvement: samples N candidates, then combines the best features into a refined output. Only N+1 model calls, highly efficient and cost-optimized.</p>
+          </div>
+          <div class="behavior-card">
             <i class="fas fa-trophy"></i>
-            <h4>Ideal</h4>
-            <p>The model identifies the flaw, disproves the false statement, and correctly reconstructs the original theorem. This is the best possible outcome.</p>
-          </div>
-          <div class="behavior-card">
-            <i class="fas fa-lightbulb"></i>
-            <h4>Corrected</h4>
-            <p>The model reconstructs the original theorem but doesn't explicitly disprove the flawed version it was given.</p>
-          </div>
-          <div class="behavior-card">
-            <i class="fas fa-search"></i>
-            <h4>Detected</h4>
-            <p>The model correctly identifies that the statement is false but fails to recover the original, correct theorem.</p>
-          </div>
-          <div class="behavior-card">
-            <i class="fas fa-thumbs-down"></i>
-            <h4>Sycophant</h4>
-            <p>The model fails to see the error and proceeds to "prove" the false statement, fully agreeing with the user's flawed premise.</p>
+            <h4>T-RANK</h4>
+            <p>Translation Ranking: uses multi-round competitive ranking to identify subtle errors. Best for complex benchmarks requiring high accuracy.</p>
           </div>
         </div>
-        
+
+        <h3 class="subsection-title">T-RANK: Multi-Round Competitive Ranking</h3>
+        <p>Our proposed T-RANK method addresses positional bias in LLM evaluation by systematically presenting candidates in different orders across multiple rounds.</p>
+
+        <div class="pipeline-interactive" id="trank-pipeline">
+          <div class="pipeline-controls">
+            <button class="pipeline-btn replay-btn" onclick="replayPipeline('trank')"><i class="fas fa-redo"></i> Replay</button>
+          </div>
+          <div class="pipeline-flow">
+            <div class="pipeline-step" data-step="1">
+              <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+              <div class="step-label">Original Text</div>
+            </div>
+            <div class="pipeline-arrow" data-step="1"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step" data-step="2">
+              <div class="step-icon"><i class="fas fa-robot"></i></div>
+              <div class="step-label">Translator LLM</div>
+            </div>
+            <div class="pipeline-arrow" data-step="2"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step" data-step="3">
+              <div class="step-icon"><i class="fas fa-clone"></i></div>
+              <div class="step-label">N Candidates</div>
+            </div>
+            <div class="pipeline-arrow" data-step="3"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step" data-step="4">
+              <div class="step-icon"><i class="fas fa-random"></i></div>
+              <div class="step-label">Shuffle Orders</div>
+            </div>
+            <div class="pipeline-arrow down-arrow" data-step="4"><i class="fas fa-arrow-down"></i></div>
+            <div class="pipeline-break"></div>
+            <div class="pipeline-step" data-step="5">
+              <div class="step-icon"><i class="fas fa-gavel"></i></div>
+              <div class="step-label">Multi-Round Ranking</div>
+            </div>
+            <div class="pipeline-arrow" data-step="5"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step" data-step="6">
+              <div class="step-icon"><i class="fas fa-trophy"></i></div>
+              <div class="step-label">Average Rank</div>
+            </div>
+            <div class="pipeline-arrow" data-step="6"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step highlight" data-step="7">
+              <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+              <div class="step-label">Improved Translation</div>
+            </div>
+          </div>
+          <div class="pipeline-description" id="trank-description">
+            <span data-step="1">Start with the original English text to be translated.</span>
+            <span data-step="2">Pass the text to the Translator LLM model.</span>
+            <span data-step="3">Sample N diverse translation candidates using higher temperature.</span>
+            <span data-step="4">Create N different orderings of the candidates to reduce positional bias.</span>
+            <span data-step="5">Judge LLM ranks candidates in each ordering across multiple rounds.</span>
+            <span data-step="6">Calculate average rank across all rounds to find the best candidate.</span>
+            <span data-step="7">Apply final corrections to produce the refined translation.</span>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">USI: Universal Self-Improvement</h3>
+        <p>USI is a cost-efficient method that generates diverse candidates and synthesizes the best elements into an improved translation with only N+1 model calls.</p>
+
+        <div class="pipeline-interactive" id="usi-pipeline">
+          <div class="pipeline-controls">
+            <button class="pipeline-btn replay-btn" onclick="replayPipeline('usi')"><i class="fas fa-redo"></i> Replay</button>
+          </div>
+          <div class="pipeline-flow">
+            <div class="pipeline-step" data-step="1">
+              <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+              <div class="step-label">Original Text</div>
+            </div>
+            <div class="pipeline-arrow" data-step="1"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step" data-step="2">
+              <div class="step-icon"><i class="fas fa-robot"></i></div>
+              <div class="step-label">Translator LLM</div>
+            </div>
+            <div class="pipeline-arrow" data-step="2"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step" data-step="3">
+              <div class="step-icon"><i class="fas fa-clone"></i></div>
+              <div class="step-label">N Candidates</div>
+            </div>
+            <div class="pipeline-arrow" data-step="3"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step" data-step="4">
+              <div class="step-icon"><i class="fas fa-search-plus"></i></div>
+              <div class="step-label">Quality Analysis</div>
+            </div>
+            <div class="pipeline-arrow" data-step="4"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-step highlight" data-step="5">
+              <div class="step-icon"><i class="fas fa-magic"></i></div>
+              <div class="step-label">Combined Translation</div>
+            </div>
+          </div>
+          <div class="pipeline-description" id="usi-description">
+            <span data-step="1">Start with the original English text to be translated.</span>
+            <span data-step="2">Pass the text to the Translator LLM with higher temperature sampling.</span>
+            <span data-step="3">Generate N diverse translation candidates with different phrasings.</span>
+            <span data-step="4">Analyze all candidates to identify strengths and weaknesses in each.</span>
+            <span data-step="5">Combine the best elements into a single refined translation.</span>
+          </div>
+        </div>
+
         <div class="judge-container">
-          <div class="judge-icon"><i class="fas fa-gavel"></i></div>
+          <div class="judge-icon"><i class="fas fa-language"></i></div>
           <div class="judge-text">
-            <h4>Using an LLM-as-a-Judge</h4>
-            <p>To classify thousands of responses accurately and efficiently, we used a majority vote of an ensemble of 3 calls to GPT-5-mini as a judge. We validated this approach on a manually labeled set, where the judge achieved <strong>95% agreement with human annotations</strong>, confirming its high reliability for our experiments.</p>
+            <h4>Key Insight: Multiple Candidate Sampling</h4>
+            <p>Sampling <strong>multiple</strong> translation <strong>candidates</strong> and combining them leads to improved performance. We also find that <strong>mixing prompts in English and target languages</strong> enhances the quality of translations.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2: Problem Distribution -->
-    <section class="white-bg">
-      <div class="content-container">
-        <h2>Problem Distribution</h2>
-        <h3>BrokenMath contains 504 problems from frontier competitions, with 183 final-answer and 321 proof-based problems.</h3>
-        <p>We present a per-competition breakdown of BrokenMath. SMT problems are kept private until their public release by the competition organizers.</p>
-        <div class="chart-container pie-chart-container">
-          <canvas id="problemDistributionChart"></canvas>
-        </div>
-      </div>
-    </section>
-
+    <!-- Section 2: Benchmark Coverage -->
     <section class="grey-bg">
       <div class="content-container">
-        <h2>Factors Influencing Sycophantic Behavior</h2>
-        <p>Prior benchmarks often underestimate sycophancy by focusing on simple, final-answer tasks. Our analysis reveals that two key factors, <strong>problem difficulty</strong> and <strong>problem type</strong>, substantially influence a model's tendency to be sycophantic.</p>
-        
-        <div class="dual-chart-container">
-          <div class="chart-container">
-            <h3 class="chart-title">Problem Type: Proofs vs. Final Answers</h3>
-            <p>Most models exhibit significantly higher sycophancy on proof-based problems compared to final-answer tasks, even after controlling for difficulty.</p>
-            <canvas id="perTypeChart"></canvas>
+        <h2>Benchmark Coverage</h2>
+        <h3>We translate four popular benchmarks into eight Eastern and Southern European languages.</h3>
+
+        <div class="behavior-container">
+          <div class="behavior-card benchmark-tooltip" data-tooltip="Existing: Global-MMLU&#10;Available: Ukrainian (UK), Romanian (RO), Lithuanian (LT), Turkish (TR), Greek(EL)">
+            <i class="fas fa-book"></i>
+            <h4>MMLU</h4>
+            <p>15,858 samples across 57 subjects testing world knowledge and reasoning.</p>
           </div>
-          <div class="chart-container">
-            <h3 class="chart-title">Problem Difficulty: Solved vs. Unsolved</h3>
-            <p>All models are substantially more sycophantic on problems they fail to solve correctly, sometimes by over 20%.</p>
-            <canvas id="difficultyChart"></canvas>
+          <div class="behavior-card benchmark-tooltip" data-tooltip="Existing: Okapi (Hellaswag subset)&#10;Available: Ukrainian (UK), Romanian (RO), Slovak(SK)">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Hellaswag</h4>
+            <p>10,042 samples for commonsense reasoning about everyday situations.</p>
           </div>
+          <div class="behavior-card benchmark-tooltip" data-tooltip="Existing: Okapi (ARC-Challenge subset)&#10;Available: Ukrainian (UK), Romanian (RO), Slovak (SK)">
+            <i class="fas fa-flask"></i>
+            <h4>ARC-Challenge</h4>
+            <p>2,291 grade-school science questions requiring complex reasoning.</p>
+          </div>
+          <div class="behavior-card benchmark-tooltip" data-tooltip="Existing: MuBench (Winogrande subset)&#10;Available: Ukrainian (UK), Romanian (RO), Lithuanian (LT), Slovak (SK), Estonian (ET), Turkish (TR), Greek(EL), Bulgarian (BG)">
+            <i class="fas fa-puzzle-piece"></i>
+            <h4>Winogrande</h4>
+            <p>1,267 pronoun resolution problems testing commonsense knowledge.</p>
+          </div>
+        </div>
+
+        <h3 class="subsection-title">🌍 Covered Languages</h3>
+        <div class="language-grid">
+          <span class="language-tag">🇺🇦 Ukrainian</span>
+          <span class="language-tag">🇷🇴 Romanian</span>
+          <span class="language-tag">🇸🇰 Slovak</span>
+          <span class="language-tag">🇱🇹 Lithuanian</span>
+          <span class="language-tag">🇪🇪 Estonian</span>
+          <span class="language-tag">🇧🇬 Bulgarian</span>
+          <span class="language-tag">🇹🇷 Turkish</span>
+          <span class="language-tag">🇬🇷 Greek</span>
         </div>
       </div>
     </section>
 
-    <!-- Section 5: Self-Sycophancy -->
+    <!-- Section 5: Comparison with Existing Translations -->
     <section class="white-bg">
       <div class="content-container">
-        <h2>Sycophancy Under Alternative Usage</h2>
-        <p>Beyond standard prompting, we examine how different usage settings affect sycophantic behavior. We investigate two critical scenarios: <strong>self-sycophancy</strong>, where a model is tricked into agreeing with its own (fabricated) output, and the deployment of <strong>agentic systems</strong> designed to improve reasoning.</p>
-        
-        <div class="dual-chart-container">
-          <div class="chart-container">
-            <h3 class="chart-title">Self-Sycophancy in Conversations</h3>
-            <p>In this experiment, we tricked models into thinking they had generated a false theorem. When asked to prove this "self-generated" theorem, sycophancy rates increased by up to 15.6%, highlighting a serious risk for automated mathematical discovery, as models may uncritically endorse their own flawed reasoning.</p>
-            <canvas id="selfSycophancyChart"></canvas>
-          </div>
-          <div class="chart-container">
-            <h3 class="chart-title">Impact of Agentic Systems</h3>
-            <p>Agentic frameworks, like best-of-n selection and iterative refinement, not only improve performance, but also reliability against sycophancy. However, the LLM judges in these systems still sometimes preferred sycophantic answers, making these systems not a complete solution.</p>
-            <canvas id="agenticChart"></canvas>
-          </div>
+        <h2>Comparison with Existing Translations</h2>
+        <p>We compare our translations against existing multilingual benchmarks using LLM-as-a-judge evaluations.</p>
+
+        <div class="chart-container">
+          <h3 class="chart-title">LLM-as-a-Judge: All Languages</h3>
+          <p>Using Gemini-2.5-Flash as a judge, our T-RANK translations are consistently preferred over existing benchmarks across all languages, with win ratios ranging from 3:1 to 4:1.</p>
+          <canvas id="selfSycophancyChart"></canvas>
         </div>
       </div>
     </section>
 
-    <!-- Section 7: Prompt Optimisation -->
+    <!-- Section 7: Language-Specific Results -->
     <section class="grey-bg mitigation-section">
         <div class="content-container">
-            <h2>Mitigating Sycophantic Behavior</h2>
-            <p>Given that sycophancy is a frequent issue, is it a fundamental alignment challenge or can it be addressed with standard mitigation strategies? We investigated two complementary approaches: inference-time interventions (like prompt engineering and confidence reporting) and alignment through fine-tuning.</p>
+            <h2>Language-Specific Results</h2>
+            <p>Our framework demonstrates consistent improvements across all eight target languages. Eastern and Southern European languages were chosen due to their complex grammatical features (case systems, grammatical gender, aspect-based verbs) that are sensitive to contextual misalignment.</p>
 
-            <h3>Inference-Time Interventions</h3>
-            <p>We evaluated two popular test-time techniques. <strong>Prompt engineering</strong>, which asks models to verify the statement's correctness, reduced but did not eliminate sycophancy, with the most notable improvement seen in DeepSeek-V3.1 (a 34.1% reduction). On the other hand,<strong>self-confidence reporting</strong>, using a model's stated confidence to detect sycophantic outputs, showed little effect.</p>
-            <div class="dual-chart-container">
-                <div class="chart-container">
-                    <h3 class="chart-title">Prompt Engineering</h3>
-                    <canvas id="promptOptimisationChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <h3 class="chart-title">Self-Confidence Reporting</h3>
-                    <canvas id="selfConfidenceChart"></canvas>
-                </div>
+            <h3>Model Performance by Language</h3>
+            <p>Average accuracy improvement across all benchmarks for each language. Greek shows the highest improvement (+3.89%), while languages with existing higher-quality resources show more modest gains. These improvements reflect both translation quality and the elimination of systematic errors in existing benchmarks.</p>
+            <div class="chart-container">
+                <canvas id="languageChart"></canvas>
             </div>
 
-            <h3>Alignment via Fine-tuning</h3>
-            <p>As a more robust approach, we fine-tuned Qwen3-4B on a mix of over 13,000 perturbed problems (with "ideal" or "detected" responses) and valid problems. The results show only modest improvement in sycophancy and utility, suggesting that while fine-tuning offers some benefit, it is not a silver bullet and may need to be combined with other methods to fully address sycophantic behavior.</p>
-            <div class="chart-container">
-                <canvas id="finetuningChart"></canvas>
+            <h3>Method Comparison Across Languages</h3>
+            <p>While USI is more suitable for short and simple dataset translation, T-RANK shows better performance when translating benchmarks with complex question structures. Below are detailed COMET scores for each language.</p>
+
+            <div class="model-toggle-container" id="model-toggle">
+                <span class="toggle-label">Translation Model:</span>
+                <button class="model-btn active" data-model="gpt">GPT-4o-mini</button>
+                <button class="model-btn" data-model="gemini">Gemini-2.0</button>
+            </div>
+
+            <div class="dual-table-container">
+                <div class="table-panel">
+                    <h4 class="panel-title">WMT24++ COMET Scores</h4>
+                    <div class="language-tabs" id="wmt-tabs">
+                        <button class="lang-tab active" data-lang="UK">🇺🇦 UK</button>
+                        <button class="lang-tab" data-lang="RO">🇷🇴 RO</button>
+                        <button class="lang-tab" data-lang="SK">🇸🇰 SK</button>
+                        <button class="lang-tab" data-lang="LT">🇱🇹 LT</button>
+                        <button class="lang-tab" data-lang="ET">🇪🇪 ET</button>
+                        <button class="lang-tab" data-lang="BG">🇧🇬 BG</button>
+                        <button class="lang-tab" data-lang="TR">🇹🇷 TR</button>
+                        <button class="lang-tab" data-lang="EL">🇬🇷 EL</button>
+                    </div>
+                    <div id="wmt-table-container"></div>
+                </div>
+
+                <div class="table-panel">
+                    <h4 class="panel-title">FLORES COMET Scores</h4>
+                    <div class="language-tabs" id="flores-tabs">
+                        <button class="lang-tab active" data-lang="UK">🇺🇦 UK</button>
+                        <button class="lang-tab" data-lang="RO">🇷🇴 RO</button>
+                        <button class="lang-tab" data-lang="SK">🇸🇰 SK</button>
+                        <button class="lang-tab" data-lang="LT">🇱🇹 LT</button>
+                        <button class="lang-tab" data-lang="ET">🇪🇪 ET</button>
+                        <button class="lang-tab" data-lang="BG">🇧🇬 BG</button>
+                        <button class="lang-tab" data-lang="TR">🇹🇷 TR</button>
+                        <button class="lang-tab" data-lang="EL">🇬🇷 EL</button>
+                    </div>
+                    <div id="flores-table-container"></div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Section: Bad Translation Examples -->
     <section class="white-bg">
       <div class="content-container">
-        <h2>Example Traces</h2>
-        <p>To see how models behave in practice, explore the interactive examples below. Each trace shows the original problem, our perturbed version, the model's response, and the final judgment from our LLM-as-a-judge.</p>
-        <div id="example-traces-container">
+        <h2>Issues in Existing Translations</h2>
+        <p>Existing multilingual benchmarks often contain systematic quality issues that affect evaluation reliability. Below are examples of common problems we identified and how our framework addresses them.</p>
+        <div id="bad-examples-container">
           <!-- This div will be populated by JavaScript -->
         </div>
       </div>
@@ -277,16 +398,24 @@
 
     <section class="grey-bg">
       <div class="content-container">
+        <h2>Translation Examples</h2>
+        <p>Our methods identify and correct subtle translation errors through competitive ranking. Below are examples showing how the methods improve translation quality by comparing multiple candidates.</p>
+        <div id="example-traces-container">
+          <!-- This div will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <section class="white-bg">
+      <div class="content-container">
         <h2>Citation</h2>
         <div class="citation-block">
-            <pre><code>@article{brokenmath2025,
-      title={BrokenMath: A Benchmark for Sycophancy in Theorem Proving with LLMs}, 
-      author={Ivo Petrov and Jasper Dekoninck and Martin Vechev},
-      year={2025},
-      eprint={2510.04721},
+            <pre><code>@article{ritranslation2025,
+      title={Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets},
+      author={Hanna Yukhymenko and Anton Alexandrov and Martin Vechev},
+      year={2026},
       archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2510.04721}, 
+      primaryClass={cs.CL},
 }</code></pre>
           </div>
       </div>
