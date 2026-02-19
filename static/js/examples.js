@@ -57,7 +57,7 @@ const badTranslationExamples = [
         <div class="bad-example-section solution">
             <h4><i class="fas fa-chart-line"></i> Quality Impact</h4>
             <div class="example-text">
-                These issues compound across the benchmark: our LLM-as-a-Judge evaluation shows that <strong>62% of our translations are preferred</strong> over existing Global-MMLU translations, with only <strong>14% rated worse</strong>. The remaining 24% are rated equal quality.
+                These issues persist across the benchmark: our LLM-as-a-Judge evaluation shows that <strong>62% of our translations are preferred</strong> over existing Global-MMLU translations, with only <strong>14% rated worse</strong>. The remaining 24% are rated equal quality.
             </div>
         </div>
     `
