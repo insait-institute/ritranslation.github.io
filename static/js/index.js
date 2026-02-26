@@ -111,36 +111,36 @@ document.addEventListener("DOMContentLoaded", function() {
         // WMT COMET scores across languages - with ref-based and QE (reference-free) scores
         // GPT-4o-mini results
         "wmt_by_language_gpt": {
-            "UK": { "Baseline": {ref: 0.827, qe: 0.742}, "SC": {ref: 0.821, qe: 0.738}, "Best-of-N": {ref: 0.843, qe: 0.756}, "USI": {ref: 0.849, qe: 0.763}, "T-RANK": {ref: 0.845, qe: 0.759} },
-            "SK": { "Baseline": {ref: 0.822, qe: 0.735}, "SC": {ref: 0.818, qe: 0.731}, "Best-of-N": {ref: 0.839, qe: 0.749}, "USI": {ref: 0.847, qe: 0.758}, "T-RANK": {ref: 0.841, qe: 0.752} },
-            "RO": { "Baseline": {ref: 0.873, qe: 0.798}, "SC": {ref: 0.870, qe: 0.795}, "Best-of-N": {ref: 0.885, qe: 0.812}, "USI": {ref: 0.891, qe: 0.819}, "T-RANK": {ref: 0.887, qe: 0.815} },
-            "LT": { "Baseline": {ref: 0.788, qe: 0.695}, "SC": {ref: 0.784, qe: 0.691}, "Best-of-N": {ref: 0.805, qe: 0.712}, "USI": {ref: 0.817, qe: 0.725}, "T-RANK": {ref: 0.812, qe: 0.720} },
-            "ET": { "Baseline": {ref: 0.821, qe: 0.733}, "SC": {ref: 0.817, qe: 0.729}, "Best-of-N": {ref: 0.838, qe: 0.748}, "USI": {ref: 0.848, qe: 0.759}, "T-RANK": {ref: 0.843, qe: 0.754} },
-            "BG": { "Baseline": {ref: 0.834, qe: 0.752}, "SC": {ref: 0.830, qe: 0.748}, "Best-of-N": {ref: 0.852, qe: 0.768}, "USI": {ref: 0.862, qe: 0.779}, "T-RANK": {ref: 0.862, qe: 0.779} },
-            "TR": { "Baseline": {ref: 0.776, qe: 0.682}, "SC": {ref: 0.772, qe: 0.678}, "Best-of-N": {ref: 0.792, qe: 0.698}, "USI": {ref: 0.803, qe: 0.710}, "T-RANK": {ref: 0.798, qe: 0.705} },
+            "UK": { "Baseline": {ref: 0.827, qe: 0.726}, "SC": {ref: 0.821, qe: 0.708}, "Best-of-N": {ref: 0.844, qe: 0.743}, "USI": {ref: 0.849, qe: 0.755}, "T-RANK": {ref: 0.845, qe: 0.742} },
+            "SK": { "Baseline": {ref: 0.822, qe: 0.741}, "SC": {ref: 0.817, qe: 0.725}, "Best-of-N": {ref: 0.837, qe: 0.756}, "USI": {ref: 0.847, qe: 0.764}, "T-RANK": {ref: 0.841, qe: 0.756} },
+            "RO": { "Baseline": {ref: 0.873, qe: 0.882}, "SC": {ref: 0.869, qe: 0.869}, "Best-of-N": {ref: 0.884, qe: 0.895}, "USI": {ref: 0.891, qe: 0.898}, "T-RANK": {ref: 0.887, qe: 0.883} },
+            "LT": { "Baseline": {ref: 0.788, qe: 0.741}, "SC": {ref: 0.790, qe: 0.735}, "Best-of-N": {ref: 0.805, qe: 0.767}, "USI": {ref: 0.817, qe: 0.771}, "T-RANK": {ref: 0.812, qe: 0.753} },
+            "ET": { "Baseline": {ref: 0.821, qe: 0.788}, "SC": {ref: 0.822, qe: 0.788}, "Best-of-N": {ref: 0.838, qe: 0.809}, "USI": {ref: 0.848, qe: 0.809}, "T-RANK": {ref: 0.843, qe: 0.797} },
+            "BG": { "Baseline": {ref: 0.834, qe: 0.751}, "SC": {ref: 0.834, qe: 0.749}, "Best-of-N": {ref: 0.852, qe: 0.788}, "USI": {ref: 0.862, qe: 0.793}, "T-RANK": {ref: 0.862, qe: 0.778} },
+            "TR": { "Baseline": {ref: 0.776, qe: 0.718}, "SC": {ref: 0.734, qe: 0.715}, "Best-of-N": {ref: 0.791, qe: 0.736}, "USI": {ref: 0.803, qe: 0.736}, "T-RANK": {ref: 0.798, qe: 0.726} },
             "EL": { "Baseline": {ref: 0.820, qe: 0.731}, "SC": {ref: 0.816, qe: 0.727}, "Best-of-N": {ref: 0.836, qe: 0.746}, "USI": {ref: 0.844, qe: 0.755}, "T-RANK": {ref: 0.841, qe: 0.752} }
         },
         // Gemini-2.0 results for WMT
         "wmt_by_language_gemini": {
-            "UK": { "Baseline": {ref: 0.835, qe: 0.751}, "SC": {ref: 0.831, qe: 0.748}, "Best-of-N": {ref: 0.851, qe: 0.765}, "USI": {ref: 0.856, qe: 0.772}, "T-RANK": {ref: 0.853, qe: 0.768} },
-            "SK": { "Baseline": {ref: 0.830, qe: 0.744}, "SC": {ref: 0.827, qe: 0.741}, "Best-of-N": {ref: 0.847, qe: 0.758}, "USI": {ref: 0.854, qe: 0.767}, "T-RANK": {ref: 0.850, qe: 0.762} },
-            "RO": { "Baseline": {ref: 0.881, qe: 0.807}, "SC": {ref: 0.878, qe: 0.804}, "Best-of-N": {ref: 0.893, qe: 0.821}, "USI": {ref: 0.898, qe: 0.828}, "T-RANK": {ref: 0.895, qe: 0.824} },
-            "LT": { "Baseline": {ref: 0.796, qe: 0.704}, "SC": {ref: 0.793, qe: 0.701}, "Best-of-N": {ref: 0.813, qe: 0.721}, "USI": {ref: 0.824, qe: 0.734}, "T-RANK": {ref: 0.820, qe: 0.729} },
-            "ET": { "Baseline": {ref: 0.829, qe: 0.742}, "SC": {ref: 0.826, qe: 0.739}, "Best-of-N": {ref: 0.846, qe: 0.757}, "USI": {ref: 0.855, qe: 0.768}, "T-RANK": {ref: 0.851, qe: 0.763} },
-            "BG": { "Baseline": {ref: 0.842, qe: 0.761}, "SC": {ref: 0.839, qe: 0.758}, "Best-of-N": {ref: 0.860, qe: 0.777}, "USI": {ref: 0.869, qe: 0.788}, "T-RANK": {ref: 0.870, qe: 0.788} },
-            "TR": { "Baseline": {ref: 0.784, qe: 0.691}, "SC": {ref: 0.781, qe: 0.688}, "Best-of-N": {ref: 0.800, qe: 0.707}, "USI": {ref: 0.811, qe: 0.719}, "T-RANK": {ref: 0.806, qe: 0.714} },
-            "EL": { "Baseline": {ref: 0.828, qe: 0.740}, "SC": {ref: 0.825, qe: 0.737}, "Best-of-N": {ref: 0.844, qe: 0.755}, "USI": {ref: 0.852, qe: 0.764}, "T-RANK": {ref: 0.849, qe: 0.761} }
+            "UK": { "Baseline": {ref: 0.828, qe: 0.688}, "SC": {ref: 0.826, qe: 0.687}, "Best-of-N": {ref: 0.828, qe: 0.687}, "USI": {ref: 0.841, qe: 0.698}, "T-RANK": {ref: 0.841, qe: 0.697} },
+            "SK": { "Baseline": {ref: 0.829, qe: 0.703}, "SC": {ref: 0.834, qe: 0.706}, "Best-of-N": {ref: 0.836, qe: 0.707}, "USI": {ref: 0.843, qe: 0.716}, "T-RANK": {ref: 0.849, qe: 0.713} },
+            "RO": { "Baseline": {ref: 0.867, qe: 0.777}, "SC": {ref: 0.868, qe: 0.777}, "Best-of-N": {ref: 0.870, qe: 0.780}, "USI": {ref: 0.881, qe: 0.785}, "T-RANK": {ref: 0.882, qe: 0.781} },
+            "LT": { "Baseline": {ref: 0.805, qe: 0.704}, "SC": {ref: 0.808, qe: 0.706}, "Best-of-N": {ref: 0.814, qe: 0.710}, "USI": {ref: 0.826, qe: 0.718}, "T-RANK": {ref: 0.827, qe: 0.716} },
+            "ET": { "Baseline": {ref: 0.847, qe: 0.737}, "SC": {ref: 0.845, qe: 0.736}, "Best-of-N": {ref: 0.852, qe: 0.743}, "USI": {ref: 0.862, qe: 0.753}, "T-RANK": {ref: 0.861, qe: 0.749} },
+            "BG": { "Baseline": {ref: 0.840, qe: 0.708}, "SC": {ref: 0.841, qe: 0.709}, "Best-of-N": {ref: 0.843, qe: 0.713}, "USI": {ref: 0.856, qe: 0.721}, "T-RANK": {ref: 0.859, qe: 0.718} },
+            "TR": { "Baseline": {ref: 0.778, qe: 0.683}, "SC": {ref: 0.779, qe: 0.685}, "Best-of-N": {ref: 0.785, qe: 0.689}, "USI": {ref: 0.797, qe: 0.697}, "T-RANK": {ref: 0.800, qe: 0.695} },
+            "EL": { "Baseline": {ref: 0.821, qe: 0.719}, "SC": {ref: 0.824, qe: 0.722}, "Best-of-N": {ref: 0.823, qe: 0.723}, "USI": {ref: 0.836, qe: 0.731}, "T-RANK": {ref: 0.838, qe: 0.726} }
         },
         // FLORES COMET scores across languages - with ref-based and QE (reference-free) scores
         "flores_by_language": {
-            "UK": { "Baseline": {ref: 0.937, qe: 0.865}, "SC": {ref: 0.937, qe: 0.865}, "Best-of-N": {ref: 0.943, qe: 0.872}, "USI": {ref: 0.947, qe: 0.878}, "T-RANK": {ref: 0.942, qe: 0.871} },
-            "SK": { "Baseline": {ref: 0.932, qe: 0.858}, "SC": {ref: 0.932, qe: 0.858}, "Best-of-N": {ref: 0.938, qe: 0.865}, "USI": {ref: 0.943, qe: 0.871}, "T-RANK": {ref: 0.939, qe: 0.866} },
-            "RO": { "Baseline": {ref: 0.945, qe: 0.878}, "SC": {ref: 0.945, qe: 0.878}, "Best-of-N": {ref: 0.950, qe: 0.885}, "USI": {ref: 0.954, qe: 0.890}, "T-RANK": {ref: 0.951, qe: 0.886} },
-            "LT": { "Baseline": {ref: 0.918, qe: 0.838}, "SC": {ref: 0.918, qe: 0.838}, "Best-of-N": {ref: 0.926, qe: 0.848}, "USI": {ref: 0.932, qe: 0.855}, "T-RANK": {ref: 0.928, qe: 0.850} },
-            "ET": { "Baseline": {ref: 0.925, qe: 0.848}, "SC": {ref: 0.925, qe: 0.848}, "Best-of-N": {ref: 0.933, qe: 0.858}, "USI": {ref: 0.939, qe: 0.865}, "T-RANK": {ref: 0.935, qe: 0.860} },
-            "BG": { "Baseline": {ref: 0.938, qe: 0.865}, "SC": {ref: 0.938, qe: 0.865}, "Best-of-N": {ref: 0.945, qe: 0.873}, "USI": {ref: 0.950, qe: 0.879}, "T-RANK": {ref: 0.947, qe: 0.875} },
-            "TR": { "Baseline": {ref: 0.912, qe: 0.830}, "SC": {ref: 0.912, qe: 0.830}, "Best-of-N": {ref: 0.921, qe: 0.840}, "USI": {ref: 0.928, qe: 0.848}, "T-RANK": {ref: 0.924, qe: 0.844} },
-            "EL": { "Baseline": {ref: 0.930, qe: 0.855}, "SC": {ref: 0.930, qe: 0.855}, "Best-of-N": {ref: 0.937, qe: 0.863}, "USI": {ref: 0.943, qe: 0.870}, "T-RANK": {ref: 0.940, qe: 0.867} }
+            "UK": { "Baseline": {ref: 0.937, qe: 0.904}, "SC": {ref: 0.937, qe: 0.902}, "Best-of-N": {ref: 0.943, qe: 0.910}, "USI": {ref: 0.947, qe: 0.919}, "T-RANK": {ref: 0.940, qe: 0.905} },
+            "SK": { "Baseline": {ref: 0.938, qe: 0.906}, "SC": {ref: 0.937, qe: 0.908}, "Best-of-N": {ref: 0.945, qe: 0.917}, "USI": {ref: 0.946, qe: 0.921}, "T-RANK": {ref: 0.943, qe: 0.912} },
+            "RO": { "Baseline": {ref: 0.939, qe: 0.947}, "SC": {ref: 0.936, qe: 0.950}, "Best-of-N": {ref: 0.945, qe: 0.956}, "USI": {ref: 0.949, qe: 0.961}, "T-RANK": {ref: 0.944, qe: 0.954} },
+            "LT": { "Baseline": {ref: 0.906, qe: 0.906}, "SC": {ref: 0.911, qe: 0.911}, "Best-of-N": {ref: 0.917, qe: 0.921}, "USI": {ref: 0.928, qe: 0.932}, "T-RANK": {ref: 0.915, qe: 0.912} },
+            "ET": { "Baseline": {ref: 0.894, qe: 0.927}, "SC": {ref: 0.902, qe: 0.935}, "Best-of-N": {ref: 0.918, qe: 0.947}, "USI": {ref: 0.918, qe: 0.948}, "T-RANK": {ref: 0.907, qe: 0.935} },
+            "BG": { "Baseline": {ref: 0.943, qe: 0.903}, "SC": {ref: 0.940, qe: 0.902}, "Best-of-N": {ref: 0.951, qe: 0.916}, "USI": {ref: 0.952, qe: 0.922}, "T-RANK": {ref: 0.950, qe: 0.912} },
+            "TR": { "Baseline": {ref: 0.920, qe: 0.904}, "SC": {ref: 0.916, qe: 0.903}, "Best-of-N": {ref: 0.927, qe: 0.912}, "USI": {ref: 0.931, qe: 0.918}, "T-RANK": {ref: 0.925, qe: 0.908} },
+            "EL": { "Baseline": {ref: 0.920, qe: 0.896}, "SC": {ref: 0.923, qe: 0.896}, "Best-of-N": {ref: 0.931, qe: 0.911}, "USI": {ref: 0.934, qe: 0.912}, "T-RANK": {ref: 0.932, qe: 0.904} }
         }
     };
 

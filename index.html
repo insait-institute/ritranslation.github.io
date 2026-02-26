@@ -107,7 +107,7 @@
           </div>
 
           <div class="summary-text">
-            <strong style="font-size: 1.1em; color: #D64045;">Abstract:</strong> The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic drift and context loss, which can lead to misleading performance metrics. In this work, we present a fully automated framework designed to address these challenges by enabling scalable, high-quality translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies, specifically Universal Self-Improvement (USI) and our proposed multi-round ranking method, T-RANK, allows for significantly higher quality outputs compared to traditional pipelines. By effectively applying these methods, our framework ensures that benchmarks preserve their original task structure and linguistic nuances during localization. We apply this approach to translate popular benchmarks and datasets into eight Eastern and Southern European languages. Evaluations using both reference-based metrics and LLM-as-a-judge show that our translations surpass existing resources, resulting in more accurate downstream model assessment. We release both the framework and the improved benchmarks to facilitate robust and reproducible multilingual AI development.
+            <strong style="font-size: 1.1em; color: #D64045;">Abstract:</strong> The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic drift and context loss, which can lead to misleading performance metrics. In this work, we present a fully automated framework designed to address these challenges by enabling scalable, high-quality translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies, specifically Universal Self-Improvement (USI) and our proposed multi-round ranking method, T-RANK, allows for significantly higher quality outputs compared to traditional pipelines. Our framework ensures that benchmarks preserve their original task structure and linguistic nuances during localization. We apply this approach to translate popular benchmarks and datasets into eight Eastern and Southern European languages (Ukrainian, Bulgarian, Slovak, Romanian, Lithuanian, Estonian, Turkish, Greek). Evaluations using both reference-based metrics and LLM-as-a-judge show that our translations surpass existing resources, resulting in more accurate downstream model assessment. We release both the framework and the improved benchmarks to facilitate robust and reproducible multilingual AI development.
           </div>
 
           <div class="button-group" id="button-group-original">
@@ -128,7 +128,7 @@
     <!-- Section 1: Main Results -->
     <section class="grey-bg">
       <div class="content-container">
-        <h2>Unlocking Multilingual Modeling With Multi-Round Automated Translation</h2>
+        <h2>Translating Benchmarks and Datasets for Multilingual LLMs</h2>
         <h3>
           Our framework demonstrates that test-time compute strategies significantly enhance machine translation quality for multilingual benchmarks and datasets.
         </h3>
@@ -399,6 +399,13 @@
                     </div>
                     <div id="flores-table-container"></div>
                 </div>
+            </div>
+            <div class="judge-container">
+              <div class="judge-icon"><i class="fas fa-language"></i></div>
+              <div class="judge-text">
+                <h4>Key Insight: Different Models Need Different Translation Methods</h4>
+                <p>We find, that our proposed methods show <strong>improvements on machine translation benchmarks</strong>. We also notice that <strong>different methods perform better for different models</strong>, highlighting the importance of model-specific optimization.</p>
+              </div>
             </div>
         </div>
     </section>
