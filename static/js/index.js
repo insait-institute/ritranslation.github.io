@@ -1,4 +1,27 @@
 $(document).ready(function() {
+    // Theme toggle
+    function applyThemeAssets(theme) {
+        document.querySelectorAll('[data-light-src][data-dark-src]').forEach(function(img) {
+            img.src = theme === 'dark' ? img.dataset.darkSrc : img.dataset.lightSrc;
+        });
+    }
+
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        themeToggle.textContent = current === 'dark' ? '☀️' : '🌙';
+        applyThemeAssets(current);
+
+        themeToggle.addEventListener('click', function() {
+            const theme = document.documentElement.getAttribute('data-theme');
+            const next = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+            applyThemeAssets(next);
+        });
+    }
+
     // Sticky Nav functionality
     const navbar = $('#sticky-navbar');
     const buttonGroup = $('#button-group-original');
@@ -131,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function() {
         yellow: 'rgba(255, 206, 86, 0.7)',
         coral: 'rgba(255, 127, 80, 0.7)',    // Coral for variety
     };
+
     // --- Section 3: WMT COMET Scores Bar Chart ---
     function createPerTypeChart() {
         const ctx = document.getElementById('perTypeChart');

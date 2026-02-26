@@ -27,6 +27,15 @@
   <!-- KaTeX Auto-render Extension -->
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
 
+  <!-- Theme: apply before render to avoid flash -->
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/example.css">
@@ -44,7 +53,8 @@
   <nav class="sticky-nav" id="sticky-navbar">
     <div class="nav-title">RiTranslation</div>
     <div class="nav-links" id="nav-links">
-      <a href="#" class="action-button">
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <a href="https://arxiv.org/abs/2602.22207" class="action-button">
         <img src="static/images/pdf-icon.png" alt="Paper Icon"> Paper
       </a>
       <a href="https://github.com/insait-institute/ritranslation" class="action-button">
@@ -65,24 +75,28 @@
         <h1 class="main-title">Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets</h1>
           <div class="is-size-5 publication-authors author-list">
             <span class="author-block">
-              <a href="https://ayukh.com/" target="_blank">Hanna Yukhymenko</a><sup>1,2*</sup>,</span>
+              <a href="https://ayukh.com/" target="_blank">Hanna Yukhymenko</a><sup>1*,2</sup>,</span>
             <span class="author-block">
-              <a href="https://insait.ai/anton-alexandrov/" target="_blank">Anton Alexandrov</a><sup>2</sup>,</span>
+              <a href="https://insait.ai/anton-alexandrov/" target="_blank">Anton Alexandrov</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://www.sri.inf.ethz.ch/people/martin" target="_blank">Martin Vechev</a><sup>1,2</sup>
             </span>
           </div>
-          <p class="author-note"><sup>1</sup>ETH Zurich, <sup>2</sup>INSAIT, Sofia University "St. Kliment Ohridski"<br><sup>*</sup>Work done during Master's thesis at INSAIT</p>
+          <p class="author-note"><sup>1</sup>NSAIT, Sofia University "St. Kliment Ohridski", <sup>2</sup>ETH Zurich<br><sup>*</sup>Work done while at INSAIT</p>
 
           <div class="org-logos">
             <div class="org-logo">
               <a href="https://insait.ai/" target="_blank" rel="noopener noreferrer">
-                <img src="static/images/insait_logo.png" alt="INSAIT">
+                <img src="static/images/insait_logo.png" alt="INSAIT"
+                   data-light-src="static/images/insait_logo.png"
+                   data-dark-src="static/images/insait_logo_white.png">
               </a>
             </div>
             <div class="org-logo">
               <a href="https://ethz.ch/en.html" target="_blank" rel="noopener noreferrer">
-                <img src="static/images/ETH_Zürich.svg" alt="ETH Zurich">
+                <img src="static/images/ETH_Zürich.svg" alt="ETH Zurich"
+                     data-light-src="static/images/ETH_Zürich.svg"
+                     data-dark-src="static/images/eth_logo_white.png">
               </a>
             </div>
             <!-- <div class="org-logo">
@@ -97,7 +111,7 @@
           </div>
 
           <div class="button-group" id="button-group-original">
-            <a href="#" class="action-button">
+            <a href="https://arxiv.org/abs/2602.22207" class="action-button">
               <img src="static/images/pdf-icon.png" alt="Paper Icon">
               Paper
             </a>
@@ -414,11 +428,11 @@
       <div class="content-container">
         <h2>Citation</h2>
         <div class="citation-block">
-            <pre><code>@article{ritranslation2026,
+            <pre><code>@article{yukhymenko2026recovered,
       title={Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets},
-      author={Hanna Yukhymenko and Anton Alexandrov and Martin Vechev},
+      author={Yukhymenko, Hanna and Alexandrov, Anton and Vechev, Martin},
       year={2026},
-      archivePrefix={arXiv},
+      journal={arXiv preprint arXiv:2602.22207},
       primaryClass={cs.CL},
 }</code></pre>
           </div>
